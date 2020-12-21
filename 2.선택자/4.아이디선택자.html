@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* #(샵)은 id를 지칭할 때 사용, id는 유일하게 사용되어야 함 */
+        #orange{
+            color: brown;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>메롱메롱~~~</h1>
+
+    <!-- emmet 문법: css선택자 기반 -->
+    <!-- div>ul>li*3 -->
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li>오렌지</li>
+            
+            <!-- li#orange + tab : id가 들어간 li 태그 생성(emmet 문법) -->
+            <li id="orange">li#orange + tab 으로 생성</li>
+        </ul>
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+        
+        <!-- span.orange + tab : class가 들어간 span 태그 생성(emmet 문법) -->
+        <span class="orange">span.orange + tab 으로 생성</span>
+    </div>    
+</body>
+</html>

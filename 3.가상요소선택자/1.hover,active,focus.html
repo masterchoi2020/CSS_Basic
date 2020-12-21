@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* hover는 마우스를 올렸을 때 스타일이 적용됨, 주로 a 태그에 사용 */
+        a:hover {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            /* active 속성을 통해 속성이 변할때 적용된다.
+              변화되는 속도 0.3초로 조절  */
+            transition: 0.3s;
+        }
+        .box:active {
+            width: 300px;
+            background: yellowgreen;
+        }
+        input {
+            width: 100px;
+            border: 1px solid gray;
+            padding: 5px 10px;
+            transition: 0.4s;
+            outline: none;
+        }
+        /* focus 는 주로 input태그에 사용 */
+        input:focus {
+            border-color: red;
+            width: 300px;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+    <a href="https://www.google.com">Google!</a>
+    <!-- .box + tab : 제일의미 없는 태그인 div 태그가 만들어 진다. -->
+    <div class="box"></div>
+    <br>
+
+    <input type="text">
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 작성형태: 제일 앞에는 조건, 마지막엔 선택자 */
+
+        /*
+            > 는 직계 가족을 의미한다.
+            ul > .orange 의미: 부모가 ul 이고 자식태그의 class가 orange 인 속성에 style 적용 
+        */
+        
+        ul > .orange {
+            color: orange;
+        }
+        
+        /* div > h1 의미: 부모가 div 이고 자식이 h1인 태그에 style 적용 */
+        div > h1 {
+            font-size: 13px;
+        }
+
+        div > ul > li {
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>메롱메롱~~~</h1>
+
+    <!-- emmet 문법: css선택자 기반 -->
+    <!-- div>ul>li*3 -->
+    <div>
+        <h1>메롱메롱~~~</h1>
+
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* 
+            우선순위 규칙
+            1.명시도 점수가 높은 선언이 우선
+                !important: 무조건 최우선
+                인라인 스타일 : 1000점
+                id 선택자: 100점
+                class 선택자: 10점(가상 클래스 10점 -> :hover, :active, :first-child )
+                태그 선택자 : 1점 (가상 요소 1점 -> ::before, ::after 등 )
+                전체 선택자: 0 점 (0점 -> :not())
+            예: .list li.item{}  : 10점 + 1점 + 10점 = 21점
+                #submit  span{}  : 100점 + 1점  = 101점   
+                :not(.box) : 10점 , :not(span) : 1점
+        */
+
+        /* 
+        div {
+            color: red !important;
+        }
+         */
+        #c-yellow {
+            color: yellow;
+        }
+        .c-green {
+            color: green;
+        }
+        div {
+            color: brown;
+        }
+        body {
+            color: skyblue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="c-yellow" class="c-green" style="color: orange">Hello!!</div>
+    <div id="c-yellow" class="c-green">Hello!!</div>
+    <div class="c-green">Hello!!</div>
+    <div>Hello!!</div>
+</body>
+</html>

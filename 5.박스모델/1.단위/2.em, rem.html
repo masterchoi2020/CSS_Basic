@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            /* 
+                html의 기본 font-size: 16px 이다.
+                em은 자기 자신의 font-size에 영향을 받습니다.
+                -예를 들어 h1태그의 font-size를 10px로 지정하고 width를
+                5em으로 지정하면 가로 길이는 5 x 10px의 50px이 됩니다.
+             */
+            /* 아래는 html 전체 기준이 될 font-szie를 20px로 설정 */
+            font-size: 20px;
+
+            /* rem (root em 으로 기준점을 이용한 em조정) 
+              단위를 맞추기 위한 기준값으로써의 font-size 지정
+            */
+        }
+        body{
+            /* 실제 사용할 font-size를 body부분에 설정 */
+            font-size: 14px;
+        }
+        body * {
+            border: 2px solid #000;
+        }
+        .container {
+            /* font-size 대비 가로넓이를 60em */
+            /* width: 60em; */
+             /* rem (root em 으로 기준점을 이용한 em조정) */
+            width: 60rem;
+            font-size: 10px;
+        }
+        .parent {
+            /* 컨테이너 font-size 10을 상속받아 width= 10*30em = 300px */
+            /* width: 30em; */
+            
+            /* rem (root em 으로 기준점을 이용한 em조정) */
+            width: 30rem;
+        }
+        .child {
+            /* width: 15em; */
+            /* rem (root em 으로 기준점을 이용한 em조정) */
+            width: 15rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.container>div.parent>div.child*2 -->
+    <div class="container">Container
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+</body>
+</html>

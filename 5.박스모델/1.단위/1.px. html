@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body * {
+            border: 2px solid #000;
+        }
+        .container {
+            /* width: 300px; */
+            /* w50p로 부모요소 대비 50퍼센트 비율로 width설정
+            (윗 부모가 600 -> 자식300) */
+            width: 50%;
+        }
+        .child {
+            /* width: 150px; */
+            /* %는 바로 윗 부모에 영향을 받는다.
+            즉, 자식의 width: 50%는 부모의 width: 300px 일 때, 자식은 150px 이된다. */
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.container>div.parent>div.child*2 -->
+    <div class="container">Container
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+</body>
+</html>

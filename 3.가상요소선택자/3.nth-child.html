@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .fruits li:nth-child(1) {
+            color: red;
+        }
+        .fruits li:nth-child(2n) {
+            color: blue;
+        }
+        .fruits li:nth-child(n+4) {
+            font-size: 20px;
+        }
+        .fruits li:nth-child(3n+1) {
+            font-style: italic;
+        }
+
+        /* 
+            .food의 첫번째 자식이 p가 아니기 때문에 
+            nth-child(1)을 쓰면 동작하지 않습니다.
+
+            이럴 땐 nth-of-type(1)으로 처리해야 합니다.
+        */
+        .food p:nth-child(1) {
+            color: yellowgreen;
+        }
+        /* nth-child 주의점:
+            .food p:nth-child(1) :  food에 들어가 첫번째 자식을 먼저 본 후 그녀석이 p인지 확인한다.
+            .food p:nth-of-type(1) : food에 들어가 p를 먼저 찾고 거기서 첫번째 것 적용 
+        */
+        .food p:nth-of-type(1) {
+            color: yellowgreen;
+        }
+        /* 
+            후손 선택자를 지정할 경우 1, 3-1이 모두 선택됨
+            1만 선택하려면 자식 선택자 > 로 접근해야 함.
+        */
+        .box-group div:first-child {
+            color: red;
+            font-weight: bold;
+        }
+        /*요소 fruit의 후손 중 클래스가 orange가 아닌애 선택  */
+        .fruits li:not(.orange){
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+     <!-- ul.fruits>li*7 -->
+     <ul class="fruits">
+         <li>딸기</li>
+         <li>사과</li>
+         <li class="orange">오렌지</li>
+         <li>망고</li>
+         <li>바나나</li>
+         <li>복숭아</li>
+         <li>파인애플</li>
+     </ul>
+     <hr>
+    <!-- .food + tab -->
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>닭강정</p>
+        <span>짬봉</span>
+    </div>
+    <hr>
+
+    <div class="box-group">
+        <!-- div{$}*3 -->
+        <div>1</div>
+        <div>2</div>
+        <div>3
+            <div>3-1</div>
+            <div>3-2</div>
+            <div>3-3</div>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

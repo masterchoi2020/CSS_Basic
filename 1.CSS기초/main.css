@@ -1,0 +1,22 @@
+/* 
+    - CSS 기본 작성 형태 - 
+    선택자 {
+        속성: 속성값 ;
+        속성: 속성값1;   속성값2;   ... ;
+    }
+*/
+
+/* 
+    @import "파일위치"는 디자인별로 여러 css파일이 있을 경우
+    필요한 css파일을 불러와 사용할 때 적용된다. 즉, css파일에서 css파일을 불러들일 때, 사용
+    예) login 에는 login.css 파일, member가입화면에는 join.css 파일 적용
+*/
+
+@import "./common.css";
+
+/* 외부 style css적용 */
+div {
+    color: red;
+}
+
+/* c + tab : color 단축키 */
