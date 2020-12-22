@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 2px solid red;
+            margin: 100px;
+
+            /* 500 x 500 이미지 */
+            background-image: url(./images/basic.jpg);
+            background-repeat: no-repeat;
+
+            /* background-size: width height; */
+            /* background-size: 200px 100px; */
+
+            /* 가로만 적으면 세로는 이미지 비율에 맞게 지정된다. */
+            /* background-size: 200px; */
+
+            /* 
+                cover: 이미지 비율은 유지하지만 더 넓은 너비에 맞춰진다.
+                만약, 보여줄 수 있는 곳의 크기가 작다면 이미지가 짤릴 수 있다.
+                예) 실이미지:500x500, 요소:400x300
+                =>cover 400x400에 맞춰짐, 그러나 요소크기가 400x300이므로 100만큼 이미지 짤림
+             */
+             background-size: cover;
+             background-position: 0 -50px;
+
+             /* contain: 이미지 비율은 유지하지만 더 짧은 너비에 맞춰진다. */
+             /* background-size: contain; */
+             
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

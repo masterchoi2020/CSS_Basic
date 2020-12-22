@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 2px dashed gray;
+            /* border-color: yellow; */
+            /* bgi + tab: background-image */
+            /* background-image: url('./images/sky.jpg'); */
+
+            background-size: 200px;
+            /* background-repeat: no-repeat;  */
+            /* 가로(x)축으로만 반복 */
+            /* background-repeat: repeat-x; */
+            /* 세로(y)축으로만 반복 */
+            /* background-repeat: repeat-y; */
+
+            /* background-position: right bottom; */
+            /* background-position: right center; */
+            /* background-position: 100px 50px; */
+
+            background: yellow url("./images/sky.jpg") no-repeat center 50px / cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
