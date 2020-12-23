@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* div[class^="container"] {
+            width: 500px;
+            padding: 20px;
+            border: 3px solid red; */
+            /* float 중첩 해결방법2(권장x):
+                부모요소에 overflow: hidden; 을 적용하여 float 중첩 해결
+             */
+            /* overflow: hidden; 
+        }*/
+        .container {
+            width: 500px;
+            padding: 20px;
+            border: 4px solid red;
+        }
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background-color: yellowgreen;
+            font-size: 50px;
+            float: left;
+        }
+
+        /* float 중첩 해결방법1(권장x): 
+            비어있는 형제박스를 하나 추가해 clear로 해제하여 중첩해결. */
+        /* .clear-box {
+            clear: both;
+        } */
+
+        /* float 중첩 해결방법3(권장O): 
+            가상요소(::before, ::after)를 추가하여 float를 해제한다.
+            주의!: float해제 속성은 반드시 block 속성을 가져야 한다.
+        */
+
+        /* .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+
+        /* <실무 tip : float해제를 여러곳에 해야 한다면?>
+            해제하고 싶은 곳에 임의의 클래스(.clearfix)를 만들고 float를 해제할 container에 적용
+         */
+
+        .clearfix::after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- .container>.box{$}*2 -->
+    <div class="container clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+
+        <!-- 빈 형제박스 추가 -->
+        <!-- <div class="clear-box"></div> -->
+
+        <!-- 가상요소 추가(::before, ::after) -->
+        <div class="container2 clearfix">
+            <div class="box">1</div>
+            <div class="box">2</div>
+        </div>
+        <div class="container3 clearfix">
+            <div class="box">1</div>
+            <div class="box">2</div>
+        </div>
+    </div>
+</body>
+</html>

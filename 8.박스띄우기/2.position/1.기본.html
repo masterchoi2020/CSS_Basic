@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed lightgray;
+            margin-top: 100px;
+            margin-left: 100px;
+
+            position: relative;
+        }
+        .box {
+            width: 150px;
+            height: 100px;
+            background: tomato;
+            border-radius: 10px;
+
+            /* positino:absolute 은 항상 top, left, right, bottom 등의 속성과 같이 사용되야 한다. */
+            position: absolute;
+            /* 
+                position은 위치상 부모를 기준으로 position을 정하게 된다. 
+                위치상 부모가 없으면 browser가 위치상 부모가 되어 browser를 기준으로 position이 정해진다.
+            */
+
+            /* 현재 container에 position:relative 가 있으므로 container가 위치상 부모가 된다.
+               box는 container의 position을 기준으로 box의 position이 결정되게 된다.
+             */
+             
+            /* top: 50px;
+            left: 70px;  */
+
+            right: 30px;
+            bottom: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
