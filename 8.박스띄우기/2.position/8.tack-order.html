@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            /* 박스 수평정렬 :flex */
+            display: flex;
+        }
+        .container .box {
+            /* 모든 박스에 postion속성 부여 */
+            position: relative;
+
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            /* border-radius: 50%; 원 만들때 사용 */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            /* 마진은 외부영역에 여백을 줄 때 사용하지만 음수(-)가 들어가면 박스가 겹쳐진다. */
+            margin-right: -30px;
+            box-shadow: 0 0 10px rgba(255,0,0,0.7);
+        }
+
+        .container .box:nth-child(2n) {
+            margin-top: 30px;
+        }
+
+        .box2 {
+            /* position: relative; */
+            /* z-index:는 값이 클 수록 앞으로 튀어 나온다.(주로 10단위로 설정) */
+            z-index: 200;
+        }
+        .box4 {
+            z-index: 10;
+        }
+        .box5 {
+            z-index: 100;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- .container>.box.box${$}*5 .box.box$ 하면 2개의 클래스가 들어간다.-->
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 4px dashed orange;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+        .relative {
+            /* positon 이동은 대부분 absolute를 이용한다. */
+            /* relative 속성은 주위 형제들에게 여향을 받는다
+              (relative는 공간을 계속 유지된 채 살아있음, absolute는 자신의 공간이 없어짐) 
+              (예: 2번은 relative속성을 부여했으므로, (보이지는 않지만) 자신의 공간을 차지하고 있다.)
+            */
+            position: relative;
+            left: 130px;
+            top: 20px;
+        }
+        .absolute {
+            /* absolute는 자기 공간이 뺏김 
+               (예: 2번은 alsolute 속성을 부여했으므로, 자신의 공간이 뺏겨 2번과 3번이 겹치게 된다.)
+            */
+            /* z축을 뒤로(-10)빼면 3번이 앞으로 나오게 됨(2번은 뒤로 숨겨져 더 이상보이지 않게 됨) */
+            /* z-index의 기본값은 1 이다. */
+            position: absolute;
+            left: 70px;
+            top: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- .box{$}*3 -->
+    <div class="box">1</div>
+    <!-- <div class="box relative">2</div> -->
+    <div class="box absolute">2</div>
+    <div class="box">3</div>
+</body>
+</html>
