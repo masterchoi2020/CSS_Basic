@@ -6,7 +6,7 @@
     <title>Document</title>
     
     <style>
-        /* container안으로 영역을 제한해도 스크롤의 영향을 받는다. */
+        /* container안으로 영역을 제한하면 제한된 영역의 스크롤에 영향을 받는다. */
         /* 
         .container {
         width: 400px;
@@ -27,8 +27,8 @@
             font-size: 24px;
             font-weight: bold;
 
-            /* sticky는 스크롤의 영향을 받지만 부모 요소를 벗어나면 영향이 사라진다. 
-              IE 에서 지원되지 않아 주로 js로 skticky 효과를 내고 있다.
+            /* sticky는 스크롤의 영향을 받지만 부모 요소를 벗어나면 그 영향이 사라진다. 
+               IE 에서 지원되지 않아 주로 js로 skticky 효과를 내고 있다.
             */
             position: sticky;
             top: 0;
