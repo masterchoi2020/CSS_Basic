@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            height: 400px;
+            border: 4px solid #000;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .item {
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 10px;
+            font-size: 40px;
+
+            /* 아이텡안에 display:flex로 하면 텍스를 아이템으로 인식 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* flex-basis는 item에 공간을 배분하기 전에 기본 너비(가로길이)를 설정하는 것임 */
+            
+            /* flex-basis:200px 로 설정하면 200px을 제외한 나머지 영역을 1:1:1 로 맞춘다. */
+            /* flex-grow로 비율을 맞출 때, 만약 안에 텍스트가 있다면 텍스트가 차지하는 공간을 
+               제외한 나머지 공간들의 비율을 맞추게 된다. 이때, flex-basis를 설정하게 되면
+               설정된 그 크기만큼을 제외한 공간들로 박스 크기의 비율을 맞추는 것이다. */
+            flex-grow: 1;
+            flex-basis: 200px;
+            
+            /* flex-basis: auto; 로 설정하면, 텍스트 또는 width가 이미 존재하면 이 영역은 제외하고
+              나머지 영역을 flex-grow 비율대로 조절하게 된다. */
+            /* flex-basis: 0; 으로 설정하면 내무에 뭐가 들어있든 무시하고 전체박스를 정확히 1:1:1로 맞춤 */
+            /* flex-grow: 1;
+            flex-basis: 0; */
+
+            /* 단축속성으로 1:1:1 비율 설정 (flex: flex-grow  flex-shrink  flex-basis*/
+            /* flex: 1 1 0;  */
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+        
+    <!-- .container>.item.item$*3  -->
+    <div class="container">
+        <div class="item item1">Hello</div>
+        <div class="item item2">A</div>
+        <div class="item item3">See you again</div>
+    </div>
+</body>
+</html>

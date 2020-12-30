@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: red;
+
+            /* 애니메이션은 hover 전에 속성에 주로 설정 */
+            /*
+            transition-property: width, background;
+            transition-property: all;
+            transition-duration: 2s; 
+            */
+
+            /* 
+            transition 단축속성 설정 (1000ms = 1s, 700ms = 0.7s) 
+            transition: property duration delay timing-fucntion; 순서로 작성
+            */
+
+            /* transition: all 1s; */
+            /* transition: width 1s, background 0.7s; */
+            
+            /* transition: 1s; */
+            /* transition-delay: 1s; */
+            /* transition: all 1s 1s; */
+
+            /* transition: 3s;
+                transition-timing-function: ease; */
+
+            /* transition: 1s steps(3) */
+            transition: all 1s 2s linear;
+
+        }
+
+        .box:hover {
+            width: 300px;
+            background: skyblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

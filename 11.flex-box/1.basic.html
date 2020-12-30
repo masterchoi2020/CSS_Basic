@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            /* width: fit-content; 컨테이너 크기에 딱 맞추기 */
+            width: fit-content;
+            border: 2px solid red;
+
+            /* flex: 수평정렬에 사용(block 속성, float와 동일기능을 하나 
+              clear해제 같은 번거로운 작업 필요없음) */
+            display: flex;
+        }
+
+        .c2 {
+            /* flex는 block 속성을 가지고 있어, inline-flex하면 컨테이너를 inline-block처럼 취급 */
+            /* dif + tab */
+            display: inline-flex;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+
+            /* inline속성은 text 최적화를 위해 만들어 졌다. 그래서 inline-block을 사용하면
+               마진을 넣지 않았는데도 박스 사이에 공백이 생긴다. 이유는 div사이 엔터를 공백으로 인식하기 때문 */
+            /* display: inline-block; */
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- .container>.item*3 + tab -->
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container c2">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container c2">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

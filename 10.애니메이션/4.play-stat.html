@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+
+            /* 애니메이션 적용 */
+            animation: size-up 3s linear infinite alternate;
+
+            /* df + tab : display: flex 설정 */
+            display: flex;
+            /* jcc + tab : flex 적용시 content 중앙 정렬  */
+            justify-content: center;
+            /* aic + tab : flex 적용시 items 중앙 정렬   */
+            align-items: center;
+        }
+        .box:hover {
+            /* ampp + tab : 애니메이션 play를 paused(중지)시킴 */
+            animation-play-state: paused;
+            background: skyblue;
+        }
+
+        .box::before {
+            content: "running";
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .box:hover::before {
+            content: "paused!";
+            color: #000;
+        }
+
+        @keyframes size-up {
+            0% {
+                width: 100px;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

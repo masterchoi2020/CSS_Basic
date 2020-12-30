@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        .box:hover {
+            /* 아래 @keyframes로 만든 애니메이션 적용하기 */
+            /* amn + tab : 애니메이션 name과 duration은 필수 입력 속성  */
+            /* animation-name: grow-up; */
+            /* amd + tab : 애니메이션의 duration 설정(지속시간 설정) */
+            /* animation-duration: 3s; */
+
+            /* amt + tab : transition-timing-function: */
+            /* animation-timing-function: linear; */
+            /* amde + tab : delay는 단축속성 작성시 duration 보다 뒤에 나오기만 하면  */
+            /* animation-delay: 1s; */
+            /* ami + tab : 반복횟수 지정(무한반복: infinite) */
+            /* animation-iteration-count: 3; */
+
+            /* 애니메이션 단축속성으로 작성 */
+            animation: grow-up 3s linear 0.1s infinite alternate;
+        }
+
+        /* 애니메이션 만들기 */
+        @keyframes grow-up {
+            /* 진행상황이 0%일 경우 */
+            0% {
+                width: 100px;
+            }
+            /* 진행상황이 75%일 경우 */
+            75% {
+                width: 500px;
+            }
+            100% {
+                width: 300px;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
