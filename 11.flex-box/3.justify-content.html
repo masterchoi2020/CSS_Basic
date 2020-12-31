@@ -9,11 +9,14 @@
         .container {
             border: 4px solid #000;
             display: flex;
-            flex-direction: row;
+
+            /* flex-direction은 flex를 이용해 정렬할 방향 지정(row:가로로 정렬, column: 세로로 정렬 )*/
+            /* flex-direction: row; */
             /* flex-warp:wrap 이 기본값
                warp : 컨테이너 크기가 줄어들면 아이템은 본래 크기를 유지한채 컨테이너 안에서 아래로 떨어지는 모양
                nowrap : 컨테이너의 크기변화에 맞춰 아이템의 크기도 조절하여 컨테이너 안에서 사이즈를 맞춰 놓음
             */
+            /* flex-flow를 이용한 단축속성  */
             flex-flow: row wrap;
 
             /* 정렬 방법 ( justify-content  vs  align-content 비교)
