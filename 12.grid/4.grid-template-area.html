@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap {
+            margin: 100px;
+            width: 600px;
+
+            /* grid로 3x3 template 구성 */
+            display: grid;
+            grid-template-rows: repeat(3, 100px); /*3행에 100px*/
+            grid-template-columns: repeat(3, 1fr);  /*3열에 1fr*/
+
+            grid-template-areas: 
+            /* heaer이름이 붙은 영역에 3칸 부여 */
+                "header header header"
+            /* main이름이 붙은 영역에 2칸 side영역에 1칸부여 */
+                "main main side"
+            /* .(점)은 빈영역으로 남기기, footer이름이 붙은 영역에 2칸 부여*/
+                ". footer  footer"
+            ;
+
+            /* 행사이 공백 넣기(행 높이깨지 않음) */
+            /* row-gap: 20px; */
+            /* 열사이 공백 넣기(열 간격이깨지 않음) */
+            /* column-gap: 15px; */
+
+            /* 단축속성으로 작성(gap은 컨테이너 속성으로 컨터네어 전체에 부여하게 됨) */
+            gap: 20px 15px
+        }
+        
+        .wrap > * {
+            border: 5px solid red;
+        }
+
+        .wrap header {
+            /* ga + tab : 영역에 이름 부여하기 */
+            grid-area: header;
+        }
+
+        .wrap section.main {
+            grid-area: main;
+        }
+
+        .wrap aside {
+            grid-area: side;
+        }
+
+        .wrap footer {
+            grid-area: footer;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+
+        <header>Header</header>
+
+        <section class="main"> Main</section>
+
+        <aside>Aside</aside>
+
+        <footer>Footer</footer>
+
+    </div>
+</body>
+</html>

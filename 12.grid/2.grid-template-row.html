@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            border: 4px solid gray;
+            /* gtr + tab : 첫번째행(100px)  두번째행(200px) */
+            /* grid-template-rows: 100px 200px; */
+
+            /* gtc + tab : 첫번째열(100px)  두번째열(150px)  세번째열(200px); */
+            /* grid-template-columns: 100px  150px  200px; */
+            
+            /* fr(fraction: 공간): 화면크기에 따라 fr "비율"로 박스크기 조절됨 
+              gtc + tab : 1fr 1fr 1fr 하면 3분의1씩 공간을 차지하게 된다.
+            */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+
+            /* repeat는 행/열의 반복이 많을 경우 일괄적으로 생성가능하게 해준다
+              24개의 행을 100px로 생성시 gtr + tab : repeat(24, 100px)
+              10개의 열을 200px로 생성시 gtr + tab : repeat(10, 200px)
+            */
+            /* grid-template-rows: repeat(24, 100px); */
+            /* grid-template-columns: repeat(3, 1fr); */
+
+            /* grid-template-rows: 100px 150px 200px 100px 150px 200px; 구성시 
+               grid-template-rows: repeat(2, 100px  150px  200px); */          
+            
+            /* grid-template-columns: repeat(2, 1fr 2fr);           */
+
+            /* 2행 100px, 3열은 1fr 크기의 grid 구성 */
+            grid-template: repeat(2, 100px) / repeat(3, 1fr);
+        }
+
+        .item {
+            border: 2px dashed red;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
