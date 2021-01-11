@@ -40,7 +40,10 @@
         .item:nth-child(4) {
             background: skyblue;
             justify-self: stretch;
-
+            
+            /* justify-self 에서는 width에 auto설정해야 stretch가 적용됨
+               align-self 에서는 height에 auto 설정해야 strecth가 적용됨
+            */
             width: auto;
         }
     </style>
