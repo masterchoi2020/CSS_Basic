@@ -6,6 +6,17 @@
     <title>Document</title>
 
     <style>
+        /* 
+            1)가상 클래스: 클래스 이름 앞에 콜론(:)을 한개만 붙여 표시
+                          (예) :link , :visited, :hover, :active, :focus 가상 클래서 선택자 등
+            
+            2)구조 가상 클래스: 웹 문서의 구조를 기준으로 특정 위치에 있는 요소를 찾아 스타일 적용
+                          (예) :first-child, :nth-child(n), nth-of-type(n) 등
+        
+            3)가상 요소: 이름 앞에 콜론(::) 두개 붙여서 표시
+                          (예) ::before, ::after, ::first-line, ::first-letter 요소 등
+        */
+        
         /* hover는 마우스를 올렸을 때 스타일이 적용됨, 주로 a 태그에 사용 */
         a:hover {
             font-weight: bold;
