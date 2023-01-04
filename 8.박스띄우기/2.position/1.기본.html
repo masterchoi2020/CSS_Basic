@@ -22,12 +22,12 @@
             border-radius: 10px;
 
             /* positino:absolute 은 항상 top, left, right, bottom 등의 속성과 같이 사용되야 한다. */
-            /* absolute를 쓸려면 조상요소에 position: xxx; 가 있어야 그 요소를 기준으로 움직인다.
-                만약, 조상요소에 postion: xxx; 가 없다면 전체 뷰포트(예: browser)를 기준으로 움직인다.
+            /* absolute를 쓸려면 조상요소에 position: relative; 가 있어야 그 요소를 기준으로 움직인다.
+                만약, 조상요소에 postion: relative; 가 없다면 전체 뷰포트(예: browser)를 기준으로 움직인다.
              */
             position: absolute;
             /* 
-                position은 위치상 가장 가까운부모를 기준으로 position을 정하게 된다. 
+                position은 위치상 가장 가까운 부모 중 position: relative;를 가진 부모를 기준으로 position을 정하게 된다. 
                 위치상 부모가 없으면 browser가 위치상 부모가 되어 browser를 기준으로 position이 정해진다.
             */
 
