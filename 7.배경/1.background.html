@@ -24,6 +24,13 @@
             /* background-position: right center; */
             /* background-position: 100px 50px; */
 
+            /* 
+                cover: 이미지 비율은 유지하지만 더 넓은 너비에 맞춰진다.
+                만약, 보여줄 수 있는 곳의 크기가 작다면 이미지가 짤릴 수 있다.
+                예) 실이미지:500x500, 요소:400x300
+                =>cover 400x400에 맞춰짐, 그러나 요소크기가 400x300이므로 100만큼 이미지 짤림
+             */
+            
             background: yellow url("./images/sky.jpg") no-repeat center 50px / cover;
         }
 
