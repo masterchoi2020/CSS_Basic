@@ -33,12 +33,15 @@
 
             /* transition: 3s;
                 transition-timing-function: ease; */
-            /*
+            
+            /* transition-timing-function 은 속도 변화를 지정
             1)ease : 시작은 천천히 중간에는 빠르게 그리고 다시 끝에는 천천히 변화합니다.
-            2)linear : 일정한 속도로 변화하게 됩니다.
+            2)linear : 일정한 속도로 변화하게 됩니다(등속으로 변함).
             3)ease-in : 천천히 시작해서 빠르게 종료됩니다.
             4)ease-out : 빠르게 시작해서 느리게 끝납니다.
             5)ease-in-out : 시작, 종료 두 지점 다 천천히 변화를 가져갑니다.
+            6)cubic-bezier(N,N,N,N): 값을 입력하여 가속/감속을 지정
+              예)linear는 cubic-bezier(0,0,1,1), ease는 cubic-bezier(0.25,0.1,0.25,1)와 같다.
             */
 
             /* transition: 1s steps(3) */
