@@ -19,15 +19,23 @@
             /* amd + tab : 애니메이션의 duration 설정(지속시간 설정) */
             /* animation-duration: 3s; */
 
-            /* amt + tab : transition-timing-function: */
+            /* amt + tab : transition-timing-function: 
+               애니메이션 속도 곡선을 지정: linear의 경우 등속 */
             /* animation-timing-function: linear; */
             /* amde + tab : delay는 단축속성 작성시 duration 보다 뒤에 나오기만 하면  */
             /* animation-delay: 1s; */
             /* ami + tab : 반복횟수 지정(무한반복: infinite) */
             /* animation-iteration-count: 3; */
 
-            /* 애니메이션 단축속성으로 작성 */
+            /* 애니메이션 단축속성으로 작성 
+            grow-up 애니메이션을 3초 동안, 등속으로, 0.1초 기다렸다가, 영원히, 순방향-영방향 순으로 지그재그 재생 */
             animation: grow-up 3s linear 0.1s infinite alternate;
+            
+            /*aninmaiton-direction 속성은 애니메이션의 재생방향 지정
+              normal: 순방향, reverse: 역방향 재생, 
+              altenate: 순방향-역방향 순으로 지그재그 재생(infinite 인 경우 실행됨)
+              altenate-reverse: 역방향-순방향 순으로 지그재그 재생(infinite 인 경우 실행됨)
+            */
         }
 
         /* 애니메이션 만들기 */
