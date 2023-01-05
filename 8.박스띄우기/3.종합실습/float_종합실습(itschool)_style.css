@@ -30,6 +30,7 @@ h1, h2, h3 {
   background: #fff;
 }
 
+
 /* header */
 header {
   text-align: center;
@@ -50,7 +51,9 @@ header p.stit {
   color: #333;
   padding: 5px;
 }
-/* container */
+
+
+/* 메인 영역: container */
 #container {
   overflow: hidden;
 }
@@ -158,7 +161,8 @@ header p.stit {
   display: block;
 }
 
-/* footer */
+
+/* footer 영역*/
 footer {
   font-size: 1.6rem;
   text-align: center;
