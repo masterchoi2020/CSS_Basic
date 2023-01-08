@@ -9,22 +9,34 @@
         .container {
             display: grid;
             border: 4px solid gray;
+            
+            /*1.행(row)과 열(column)의 크기와 개수 지정
+            grid-template-rows 는 행의 개수와 크기
+            grid-template-columns 는 열의 개수와 크기를 지정
+            */
+            
             /* gtr + tab : 첫번째행(100px)  두번째행(200px) */
             /* grid-template-rows: 100px 200px; */
 
             /* gtc + tab : 첫번째열(100px)  두번째열(150px)  세번째열(200px); */
             /* grid-template-columns: 100px  150px  200px; */
             
-            /* fr(fraction: 공간): 화면크기에 따라 fr "비율"로 박스크기 조절됨 
-              gtc + tab : 1fr 1fr 1fr 하면 3분의1씩 공간을 차지하게 된다.
+            /*2.행과 열의 상대적 크기 지정 단위: fr 단위(fraction)
+                fr(fraction: 공간): 화면크기에 따라 fr "비율"로 박스크기 조절됨
+            
+                예1) 너비가 같은 컬럼(열) 3개 배치
+                    gtc + tab : 1fr 1fr 1fr 하면 3분의1씩 공간을 차지하게 된다.
+                grid-template-columns: 1fr 1fr 1fr;
+            
+                예2)너비가 2:1:2 비율로 컬럼(열) 3개 배치
+                grid-template-columns: 2fr 1fr 2fr;   
             */
-            /* grid-template-columns: 1fr 1fr 1fr; */
-
+            
             /* repeat는 행/열의 반복이 많을 경우 일괄적으로 생성가능하게 해준다
-              24개의 행을 100px로 생성시 gtr + tab : repeat(24, 100px)
-              10개의 열을 200px로 생성시 gtc + tab : repeat(10, 200px)
+              10개의 행(row)을 100px로 생성시 gtr + tab : repeat(10, 100px)
+              12개의 열(column)을 200px로 생성시 gtc + tab : repeat(10, 200px)
             */
-            /* grid-template-rows: repeat(24, 100px); */
+            /* grid-template-rows: repeat(10, 100px); */
             /* grid-template-columns: repeat(3, 1fr); */
 
             /* grid-template-rows: 100px 150px 200px 100px 150px 200px; 구성시 
@@ -32,8 +44,9 @@
             
             /* grid-template-columns: repeat(2, 1fr 2fr);           */
 
-            /* 2행 100px, 3열은 1fr 크기의 grid 구성 */
-            grid-template: repeat(2, 100px) / repeat(3, 1fr);
+            /* 단축 속성 지정
+               2행(row) 100px, 3열(column)은 1fr 크기의 grid 구성 */
+             grid-template: repeat(2, 100px) / repeat(3, 1fr);
         }
 
         .item {
